@@ -1,0 +1,38 @@
+<!-- ALUMNY.html-->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block childpage %}
+
+
+
+<div class="container">
+    <!-- start heading-->
+<div class="row">
+    <div class="col-sm-5 mx-auto text-center my-4">
+        <p class="fs-3 m-0">Our <b class="txt-color1">Alumni
+       <i class="fa-solid fa-earth-americas"></i>
+        </b></p>
+        <i>Our alumni are leaders, innovators, and professionals, making impactful contributions across diverse industries worldwide.</i>
+        <hr/>
+    </div>
+</div>
+<!-- end heading-->
+    <div class="row my-2">
+        {% for i in adata %}
+        <div class="col-sm-3 ">
+             <div class="card mx-auto mb-4 shadow-lg border-0" style="width: 17rem;">
+  <div class="card-body text-center">
+     <center><img class="rounded-circle" width="120px;" height="120px;" src="../{{i.student_picture}}"/></center>
+      <h4 class="card-title mt-2">{{i.name}}</h4>
+      <h6 class="card-subtitle mb-2 text-body-secondary">Company : <b>{{i.company_name}}</b></h6>
+    <h6 class="card-subtitle mb-2 text-body-secondary">Placement Session : <b>{{i.placement_session}}</b></h6>
+  </div>
+</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
+<!-- end ALUMNY.html-->

@@ -1,0 +1,69 @@
+<!-- ABOUT.html-->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block childpage %}
+
+<!-- start heading-->
+<div class="row">
+    <div class="col-sm-5 mx-auto text-center my-4">
+        <p class="fs-3 m-0">About <b class="txt-color1">Us
+       <i class="fa-regular fa-address-book"></i>
+        </b></p>
+        <i>Our college fosters innovation, excellence, and holistic development, empowering students for successful careers.</i>
+        <hr/>
+    </div>
+</div>
+<!-- end heading-->
+
+<!-- About Us start -->
+  <div class="container about">
+    <div class="hline"></div>
+    <div class="fs-4 txt-color1">About Us</div>
+    <div class="row about">
+      <div class="col-sm-6 px-3 py-3 " style="text-align: justify;">
+       Collage is an artistic technique that involves assembling various materials such as paper, photographs, fabric,
+        and other found objects, adhering them onto a surface to create a new composition. Emerging prominently in the early 20th century
+        with pioneers like Pablo Picasso and Georges Braque during the Cubist movement, collage became a powerful medium for artists to experiment
+        with form, texture, and dimension. It allows for a blending of different elements—be it newspaper clippings, magazine cut-outs, paint, or
+        fabric—providing endless creative possibilities. The unique ability of collage to juxtapose and recontextualize materials makes it a versatile
+        tool for both abstract and representational art. Over time, the technique evolved beyond traditional mediums into digital formats, with software like Adobe Photoshop enabling artists to create intricate, layered digital collages without physical materials. Collage also plays a key role in mixed media, where it's combined with other techniques such as painting and drawing, allowing artists to merge various forms of expression into a cohesive whole. Whether used for abstract exploration, social commentary, or surreal storytelling, collage continues to be a vibrant and evolving artistic form,
+        adaptable to various creative pursuits across both physical and digital landscapes.
+      </div>
+      <div class="col-sm-6 px-3 py-3">
+        <img src="{% static 'img/ima-fp/c5.jpg' %}" class="img-thumbnail w-100" ></div>
+    </div>
+
+    <div class="row about">
+      <div class="col-sm-6 px-3 py-3">
+        <img src="{% static 'img/ima-fp/cl.jpg' %}" class="img-thumbnail w-100" >
+      </div>
+      <div class="col-sm-6">
+        <div class="hline"></div>
+        <div class="fs-4 txt-color1">Mission</div>
+        <div style="text-align: justify;">A college mission statement defines the core purpose, values, and goals of an institution. It typically outlines the college's commitment to providing quality education, fostering intellectual growth, and preparing students for their future careers and civic responsibilities. College missions often emphasize inclusivity, innovation, and personal development, promoting a learning environment that encourages critical thinking, creativity, and leadership.</div>
+        <div class="fs-4 txt-color1">Education for Life</div>
+        <div style="text-align: justify;">"Education for life" is a comprehensive approach to learning that goes beyond traditional academic instruction, focusing on developing critical thinking, emotional intelligence, problem-solving, and interpersonal skills to prepare individuals for both personal and professional success; it emphasizes the importance of lifelong learning, encouraging -rounded individuals who contribute meaningfully to their communities and society at large; this educational philosophy fosters resilience, creativity, collaboration, and purpose-driven living, ensuring that learners are not only equipped with the skills needed for their careers but also the attitudes and values that support personal fulfillment.</div>
+      </div>
+    </div>
+    <div class="row about mt-3 mb-4">
+      <div class="col-sm-6">
+        <div class="hline"></div>
+        <div class="fs-4 txt-color1">Vision</div>
+        <div style="text-align: justify;">A college’s vision statement outlines the long-term aspirations and guiding principles that shape the institution's future direction. It serves as an inspirational framework that drives decision-making and strategic planning, while also reflecting the college's commitment to fostering an environment of innovation, inclusivity, and academic excellence.
+
+The vision of a college often emphasizes its aim to become a leader in education, research, and community engagement, aiming to cultivate graduates who are not only skilled in their chosen fields but also possess the critical thinking, creativity, and social awareness necessary to address the challenges of the modern world. Many colleges aspire to create a global impact, preparing students to be active participants in a diverse and interconnected society.
+
+In addition, a strong college vision focuses on enhancing the quality of education, encouraging collaboration among students, faculty, and industry, and supporting continuous improvement in academic and technological innovation. This long-term outlook seeks to build a nurturing environment where students grow intellectually, socially, and ethically..</div>
+
+      </div>
+      <div class="col-sm-6">
+        <img src="{% static 'img/ima-fp/c1.jpg' %}" class="img-thumbnail w-100" >
+      </div>
+    </div>
+
+  </div>
+
+<!-- About Us end -->
+
+{% endblock %}

@@ -1,0 +1,48 @@
+<!-- FEEDBACK.html-->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block childpage %}
+<style>
+    .form-control
+    {
+    height:50px;
+    border:none;
+    border-radius:0px !important;
+    }
+</style>
+
+<!-- start heading-->
+<div class="row">
+    <div class="col-sm-5 mx-auto text-center my-4">
+        <p class="fs-3 m-0">Write Your Valuable <b class="txt-color1">Feedback
+        <i class="fa-solid fa-users"></i>
+        </b></p>
+        <i>Mirzapur is a prominent institution dedicated to providing quality technical education. </i>
+        <hr/>
+    </div>
+</div>
+<!-- end heading-->
+
+<div class="row">
+    <div class="col-sm-10 mx-auto">
+        <div class="row">
+            <div class="col-sm-6">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                Name<br/><input name="name" type="text" placeholder="Enter Your Name .." class="form-control shadow-lg mb-2"/>
+                Your Picture<br/><input name="fu" type="file" class="form-control shadow-lg mb-2"/>
+                Write your valuable feedback
+                <textarea style="min-height:150px;resize:none;" name="message" placeholder="Enter your feedback" class="form-control shadow-lg mb-2"></textarea>
+                    <input type="submit" value="Save" class="form-control shadow-lg mb-2 w-25 bg-mycolor1 text-light">
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <img src="{% static 'img/pen.jpg' %}" class="img-thumbnail w-100" style="height:400px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+<!-- end FEEDBACK.html-->

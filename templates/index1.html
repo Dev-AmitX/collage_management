@@ -1,0 +1,220 @@
+<!-- INDEX1.hrml-->
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block childpage %}
+
+  <div class="row slider">
+    <!-- start slider -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+  </div>
+  <div class="carousel-inner">
+      {% for i in sdata %}
+    <div class="carousel-item active">
+      <img src="../{{i.slider_image}}" class="d-block w-100 img" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>{{i.title}}</h5>
+        <p>{{i.description}}</p>
+      </div>
+    </div>
+
+      {% endfor %}
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+  </div>
+<!-- end slider -->
+
+
+<!-- Latest notice start-->
+<div class="container-fluid bg-light">
+  <div class="container notice ">
+    <div class="row notice">
+      <div class="col-sm-8 shadow-lg mt-5 mb-5 bg-body-tertiary rounded">
+        <div class="row my-4 rounded-3" style="background:white;">
+
+          <!-- start heading-->
+<div class="row">
+    <div class="col-sm-8 mx-auto text-center">
+        <p class="fs-3 m-0">Latest <b class="txt-color1">Notice
+        <i class="fa-solid fa-bell"></i>
+        </b></p>
+        <i>Latest Notice provides timely updates, announcements, and important information.</i>
+        <hr/>
+    </div>
+</div>
+<!-- end heading-->
+        </div>
+        <marquee direction="up" behavior="alternate" height="400px;" onmouseover="stop()" onmouseleave="start()">
+
+         {% for x in ndata %}
+        <!-- start notice-->
+        <div class="row shadow-lg p-3 mb-1 bg-body-tertiary rounded">
+          <div class="col-sm-3">
+            <p class="text-muted"><i class="fa-solid fa-calendar-days txt-color1"></i>
+              : {{x.posted_date}}</p>
+          </div>
+          <div class="col-sm-9">
+            <a href="{{x.notice_link}}" target="_blank" style="text-decoration:none;" class="text-muted">
+            <img src="{% static 'img/newicon.gif' %}" height="20px;">
+            {{x.notice}}
+            </a>
+          </div>
+        </div>
+        <!-- end notice-->
+        {% endfor %}
+          </marquee>
+
+      </div>
+
+
+         <div class="col-sm-4 mt-5 mb-5 ">
+             <div class="row">
+    <div class="col-sm-8 mx-auto text-center">
+        <p class="fs-3 m-0">Latest <b class="txt-color1">Events
+        <i class="fa-regular fa-calendar-check"></i>
+        </b></p>
+        <i>Latest Events showcases recent happenings, news, and activities.</i>
+        <hr/>
+    </div>
+</div>
+<!-- end heading-->
+        <div class="row my-1 rounded-3 mx-1" style="background:white;">
+                  <!-- start heading-->
+          <div class="col-sm-3 mt-3"><p><i class="fa-solid fa-calendar-days txt-color1"></i> : 25 Mar</p></div>
+          <div class="col-sm-9 mt-3"><p>It has survived not only five centuries, but also the leap into electronic typesetting</p></div><hr/>
+            <div class="col-sm-3 mt-3"><p><i class="fa-solid fa-calendar-days txt-color1"></i> : 25 Mar</p></div>
+          <div class="col-sm-9 mt-3"><p>It has survived not only five centuries, but also the leap into electronic typesetting</p></div><hr/>
+            <div class="col-sm-3 mt-3"><p><i class="fa-solid fa-calendar-days txt-color1"></i> : 25 Mar</p></div>
+          <div class="col-sm-9 mt-3"><p>It has survived not only five centuries, but also the leap into electronic typesetting</p></div><hr/>
+            <div class="col-sm-3 mt-3"><p><i class="fa-solid fa-calendar-days txt-color1"></i> : 25 Mar</p></div>
+          <div class="col-sm-9 mt-3"><p>It has survived not only five centuries, but also the leap into electronic typesetting</p></div><hr/>
+            <div class="col-sm-3 mt-3"><p><i class="fa-solid fa-calendar-days txt-color1"></i> : 25 Mar</p></div>
+          <div class="col-sm-9 mt-3"><p>It has survived not only five centuries, but also the leap into electronic typesetting</p></div><hr/>
+    </div>
+     </div>
+    </div>
+</div>
+</div>
+
+  <!-- Latest notice end-->
+
+
+  <!-- vision section start-->
+
+<!-- start heading-->
+<div class="row">
+    <div class="col-sm-5 mx-auto text-center my-4">
+        <p class="fs-3 m-0">Vision <b class="txt-color1">Founders
+        <i class="fa-solid fa-eye-low-vision"></i>
+        </b></p>
+        <i>Vision Founders is a platform focused on empowering entrepreneurs through mentorship, resources, and community. </i>
+        <hr/>
+    </div>
+</div>
+<!-- end heading-->
+
+  <div class="container vision">
+    <div class="row vision">
+      <div class="col-sm-6">
+        <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{% static 'img/yogi.jpg' %}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Shri Yogi Adityanath</h5>
+        <h5 class="card-title">Hon'ble Chief Minister</h5>
+        <h5 class="card-title">Uttar Pradesh</h5>
+      </div>
+    </div>
+  </div>
+</div>
+        <div class="vline px-4 py-4 mb-3" style="text-align: justify;">
+           Shri Yogi Adityanath, born as Ajay Singh Bisht on June 5, 1972, is the current Chief Minister of Uttar Pradesh. A prominent leader of the Bharatiya Janata Party (BJP), he has been serving as CM since March 2017. Prior to his political career, Yogi Adityanath was actively involved in religious and social activities as a head priest of the Gorakhnath Math, a prominent Hindu temple in Gorakhpur.
+
+He entered politics in 1998 as a Member of Parliament from Gorakhpur and was re-elected multiple times. Known for his strong views on Hindutva, Yogi Adityanath has been a vocal advocate for Hindu values and cultural revivalism. His administration has focused on law and order, infrastructure development, and welfare schemes for the marginalized. He introduced key initiatives like the One District One Product (ODOP) scheme to promote local businesses and the Anti-Romeo Squads to address women's safety.
+
+Under his leadership, Uttar Pradesh has seen a push towards economic reforms, with efforts to improve industrial growth and infrastructure. Yogi Adityanath remains a polarizing figure but continues to be a significant force in Indian politics.
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card mb-3" style="max-width: 5400px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{% static 'img/ashish.jpg' %}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Shri Ashish Patel</h5>
+        <h5 class="card-title">Hon'ble Minister for Technical Education</h5>
+        <h5 class="card-title">Uttar Pradesh</h5>
+      </div>
+    </div>
+  </div>
+</div>
+        <div class="vline px-4 py-4 mb-3" style="text-align: justify;">
+         Shri Ashish Patel is the Hon'ble Minister for Technical Education in Uttar Pradesh. He is a key figure in the state's cabinet, responsible for overseeing and improving the technical education infrastructure across Uttar Pradesh. His leadership plays a pivotal role in ensuring that the technical and vocational education sector aligns with the demands of modern industries and contributes to the overall development of skilled manpower in the state.
+
+Ashish Patel is also a member of the Apna Dal (Sonelal) party, an ally of the Bharatiya Janata Party (BJP). He represents the aspirations of the people from his constituency and has been actively involved in promoting policies aimed at enhancing educational standards.
+
+During his tenure, he has focused on initiatives that increase the employability of students, upgrading the curriculum to meet contemporary technological advancements, and fostering collaboration with industries for better internships and training programs. Uttar Pradesh has witnessed growth in its technical education landscape, with more emphasis on practical skills and digital learning. His efforts aim to make Uttar Pradesh a hub of skilled professionals.
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- vision section end-->
+
+<!-- start heading-->
+<div class="row">
+    <div class="col-sm-5 mx-auto text-center my-4">
+        <p class="fs-3 m-0">Our Students <b class="txt-color1">Says
+       <i class="fa-solid fa-face-smile"></i>
+        </b></p>
+        <i>Students Says is a platform where students share their experiences, opinions, and educational insights. </i>
+        <hr/>
+    </div>
+</div>
+<!-- end heading-->
+
+<!-- feedback start-->
+  <div class="container feedback">
+    <div class="row feedback">
+      {% for i in fdata%}
+    <div class="col-sm-6">
+      <div class="shadow-lg p-4 mb-3">
+        <div class="mt-3 vline px-3" style="text-align: justify;">
+          {{i.feedback}}
+        </div>
+      <div class=" row mx-4 my-3"><div class="col-sm-2"><img class="rounded-circle" src="../{{i.picture}}" height="60px" width="60px"></div>
+        <div class="col-sm-10"><b class="fs-5">{{i.name}}</b>
+        </div>
+        </div>
+        </div>
+    </div>
+      {% endfor %}
+      </div>
+  </div>
+
+  <!-- feedback end-->
+
+{% endblock %}

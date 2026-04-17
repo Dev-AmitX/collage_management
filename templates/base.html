@@ -1,0 +1,394 @@
+<!-- BASE.html-->
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link href="{% static 'css/all.css' %}" rel="stylesheet">
+  <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+  <style>
+    body
+    {
+    overflow-x:hidden;
+    }
+    :root
+    {
+    --bgcolor1:#aa0001;
+    --bgcolor2:#313131;
+    --bgcolor3:#f1c45c;
+    }
+    .bg-mycolor1
+    {
+    background:var(--bgcolor1);
+    }
+    .bg-mycolor2
+    {
+    background:var(--bgcolor2);
+    }
+    .bg-mycolor3
+    {
+    background:var(--bgcolor3);
+    }
+    .txt-color1
+    {
+    color:var(--bgcolor1);
+    }
+    .txt-color2
+    {
+    color:var(--bgcolor2);
+    }
+    .txt-color3
+    {
+    color:(--bgcolor3);
+    }
+    .t1 a
+    {
+    text-decoration:none;
+    color:white;
+    }
+    .t1
+    {
+    font-size:14px;
+    }
+    .ic
+    {
+    border:1px solid var(--bgcolor2);
+    height:30px;
+    width:30px;
+    text-align:center;
+    line-height:30px;
+    border-radius:1px;
+    transition:all .5s;
+    color:var(--bgcolor1);
+    }
+    .if
+    {
+    height:25px;
+    width:25px;
+    color:#ffffff;
+    }
+    .ic:hover
+    {
+    border:1px solid var(--bgcolor3);
+    color:var(--bgcolor3);
+    transform:rotate(360deg);
+    transition:all .5s;
+    }
+    #menu
+    {
+    background:transparent !important;
+    }
+    #menu ul li a
+    {
+    color:white;
+    }
+    .img
+    {
+    max-height:500px;
+    }
+    .notice
+    {
+    min-height:100px;
+    }
+    .footer
+    {
+    min-height:500px;
+    background:#272626;
+    line-height:30px;
+    }
+    .vision
+    {
+    min-height:350px;
+    }
+    .vline
+    {
+    border-left:5px solid red;
+    min-height:50px;
+    }
+    .gallery
+    {
+    min-height:300px;
+    }
+    .recruiters
+    {
+    min-height:300px;
+    }
+    .rsection
+    {
+    min-height:100px;
+    }
+    .rimg
+    {
+    max-height:150px;
+    }
+    .f
+    {
+    text-decoration:none;
+    color:white;
+    }
+    .feedback
+    {
+    min-height:300px;
+    }
+    .about
+    {
+    min-height:300px;
+    }
+    .iconcenter
+    {
+    position:absolute;
+    left:50%;
+    }
+    .hline
+    {
+    border-top:5px solid var(--bgcolor1);
+    width:30px;
+    }
+     .fline
+    {
+    border-top:2px solid var(--bgcolor1);
+    width:35px;
+    }
+    .contact
+    {
+    min-height:300px;
+    }
+    ul{
+    display:contents;
+    list-style:none;
+    }
+    .a:hover
+    {
+    color:var(--bgcolor3);
+    position: relative;
+    left: 3px;
+    transition: all 0.1s ease-in-out;
+    }
+    .t::placeholder
+    {
+    color:#756b59;
+    }
+    .lh
+    {
+    line-height:1;
+    }
+    .foline
+    {
+    border-top:3px solid white;
+    width:100%
+    }
+    .bfooter
+     {
+      margin-top:1px;
+      background:#222222;
+      text-align:center;
+      }
+  </style>
+</head>
+<body>
+<div class="container-fluid px-0">
+  <div class="row t1 bg-mycolor2 text-light text-center py-1">
+    <div class="col-sm-3 pt-1">
+      <a href="#">FAQs</a> |
+      <a href="/about/">About Us</a> |
+      <a href="/contact/">Contact & Support</a>
+    </div>
+    <div class="col-sm-3">
+      <a href="tel:+91 9569146725"><i class="fa-solid fa-phone ic"></i></a>
+      +91 9569146725, 7068593406, 8652700734
+    </div>
+    <div class="col-sm-3 pt-1">
+      <a target="_blank" href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDZBJRBPJjfCwcwnnzLGWXwSbgxRCTgKlDXvCjQCvDQkHNmVWmKhnClLnKfLHBXvhBsFHhM"><i class="fa-solid fa-envelope ic"></i></a>
+      teamaaabv@gmail.com
+    </div>
+    <div class="col-sm-3 pt-1">
+      <a href="/admins/" class="badge bg-mycolor1 rounded-pill">
+          <i class="fa-solid fa-right-to-bracket"></i>
+          Admin Login</a>
+    </div>
+  </div>
+  <div class="row t2 py-4">
+    <div class="col-sm-10 mx-auto">
+      <div class="row">
+        <div class="col-sm-8 fs-2">
+          GOVT<b class="txt-color1">POLYTECHNIC RAJGARH MZP<i class="fa-solid fa-graduation-cap"></i></b>
+        </div>
+
+        <div class="col-sm-4 pt-2">
+           <i class="fa-brands fa-facebook ic"></i>
+      <i class="fa-brands fa-twitter ic"></i>
+      <i class="fa-brands fa-youtube ic"></i>
+      <i class="fa-brands fa-instagram ic"></i>
+      <i class="fa-brands fa-linkedin ic"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row menu bg-mycolor1 sticky-top" style="min-height:40px;">
+    <div class="col-sm-11 mx-auto">
+      <!-- start menu -->
+      <nav class="navbar navbar-expand-lg p-0 navbar-light bg-light" id="menu">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item pe-3">
+          <a class="nav-link active" aria-current="page" href="/home/">
+            <i class="fa-solid fa-house"></i>
+            Home</a>
+        </li>
+        <li class="nav-item pe-3">
+          <a class="nav-link active" aria-current="page" href="/about/">
+            <i class="fa-solid fa-address-book"></i>
+            About Us</a>
+        </li>
+          <li class="nav-item pe-3">
+          <a class="nav-link active" aria-current="page" href="/primsg/">
+          <i class="fa-regular fa-message"></i>
+            Principal Messages</a>
+        </li>
+        <li class="nav-item pe-3">
+          <a class="nav-link active" aria-current="page" href="/infra/">
+            <i class="fa-solid fa-building"></i>
+            Infrastructure</a>
+        </li>
+        <li class="nav-item pe-3">
+          <a class="nav-link" href="/courses/">
+            <i class="fa-solid fa-book"></i>
+            Courses</a>
+        </li>
+        <li class="nav-item pe-3">
+          <a class="nav-link active" aria-current="page" href="/faculty/">
+            <i class="fa-solid fa-users"></i>
+            Faculty</a>
+        </li>
+        <li class="nav-item pe-3">
+          <a class="nav-link active" aria-current="page" href="/recruiters/">
+            <i class="fa-solid fa-building-columns"></i>
+            Recruiters</a>
+        </li>
+          <li class="nav-item pe-3">
+          <a class="nav-link active" aria-current="page" href="/alumny/">
+            <i class="fa-solid fa-earth-americas"></i>
+            Alumni</a>
+        </li>
+        <li class="nav-item pe-3">
+          <a class="nav-link active" aria-current="page" href="/gallery/">
+            <i class="fa-solid fa-image"></i>
+            Gallery</a>
+        </li>
+        <li class="nav-item pe-3">
+          <a class="nav-link active" aria-current="page" href="/feedback/">
+            <i class="fa-solid fa-comment-dots"></i>
+            Feedback</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+      <!-- end menu -->
+    </div>
+  </div>
+    <div class="row">
+        <div class="col-sm-12">
+            {% block childpage %}
+
+            {% endblock %}
+        </div>
+    </div>
+
+
+<!-- footer start-->
+  <div class="footer">
+    <div class="container">
+      <div class="row py-5 my-1">
+        <div class="col-sm-4 text-light">
+          <h5>About Us</h5>
+          <div class="fline"></div>
+          <p class="pt-3"> "Government Polytechnic Rajgarh, Mirzapur is a premier technical institute committed to providing quality education, practical skills, and disciplined learning."</p><hr/>
+           <div class="fs-6 lh "><i class="fa-solid fa-phone pt-0 pe-0"></i> +91 9569146725</div><hr/>
+          <div class="fs-6 lh"><i class="fa-solid fa-envelope pt-0 pe-0"></i> mycollege@gmail.com.com</div><hr/>
+          <div class="fs-6 lh"><i class="fa-solid fa-location-dot pe-0"></i> Mirzapur, Uttar Pradesh, 231001 India</div>
+
+
+        </div>
+        <div class="col-sm-2 text-light">
+          <h5>Student</h5>
+          <div class="fline"></div>
+          <div class="t1 pt-3">
+            <ul>
+              <li><i class="fas fa-angle-right"></i><a class="a" href="#"> Admission</a></li>
+              <li class="pt-1"><i class="fas fa-angle-right"></i><a class="a" href="#"> Examination</a></li>
+              <li class="pt-1"><i class="fas fa-angle-right"></i><a class="a" href="#"> Time Table/Center List</a></li>
+              <li class="pt-1"><i class="fas fa-angle-right"></i><a class="a" href="#"> Evaluation/Result</a></li>
+              <li class="pt-1"><i class="fas fa-angle-right"></i><a class="a" href="#"> Research</a></li>
+              <li class="pt-1"><i class="fas fa-angle-right"></i><a class="a" href="#"> Syllabus</a></li>
+              <li class="pt-1"><i class="fas fa-angle-right"></i><a class="a" href="#"> Anti Ragging</a></li>
+              <li class="pt-1"><i class="fas fa-angle-right"></i><a class="a" href="#"> Help Desk</a></li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="col-sm-3 text-light">
+           <h5>College Zone</h5>
+          <div class="fline"></div>
+          <div class="t1 pt-3">
+            <ul>
+              <li><i class="fas fa-angle-right"></i><a class="a" href="#"> Administration</a></li>
+              <li class="pt-1"><i class="fas fa-angle-right"></i><a class="a" href="#"> Teaching Staff</a></li>
+              <li class="pt-1"><i class="fas fa-angle-right"></i><a class="a" href="#"> Academic Calendar</a></li>
+              <li class="pt-1"><i class="fas fa-angle-right"></i><a class="a" href="#"> Holiday List</a></li>
+              <li class="pt-1"><i class="fas fa-angle-right"></i><a class="a" href="#"> Seminar/Workshop/Conference</a></li>
+              <li class="pt-1"><i class="fas fa-angle-right"></i><a class="a" href="#"> Recruitment</a></li>
+              <li class="pt-1"><i class="fas fa-angle-right"></i><a class="a" href="#"> Tenders</a></li>
+              <li class="pt-1"><i class="fas fa-angle-right"></i><a class="a" href="#"> Teaching/Non-Teaching Union</a></li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="col-sm-3 text-light">
+          <h5>Quick contact</h5>
+          <div class="fline"></div>
+          <form class="pt-3">
+            <input type="Email" name="email" required placeholder="Your Email.." style="background:transparent;" class="form-control t w-100 mb-2">
+            <textarea type="text" name="msg" required placeholder="Type Your Message.." style="background:transparent;" class="form-control t w-100 mb-2"></textarea>
+            <input type="submit" value="SEND MESSAGE" class="form-control w-100 ">
+          </form>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-5 pt-5">
+            <div class="foline"></div>
+          </div>
+          <div class="col-sm-2  pt-4">
+            <i class="fa-brands fa-facebook if ms-3"></i>
+            <i class="fa-brands fa-twitter if"></i>
+            <i class="fa-brands fa-instagram if"></i>
+            <i class="fa-brands fa-youtube if"></i>
+            <i class="fa-brands fa-linkedin if"></i>
+          </div>
+          <div class="col-sm-5 pt-5">
+            <div class="foline"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row bfooter text-light">
+        <div class="col-sm-12 pt-1">
+           <a href="#" class="text-light" style="text-decoration:none;">Theme designed and developed by : A3BV</a> |
+           <a href="https://www.techpile.in/"  class="text-white " target="_blank" style="text-decoration:none;">  &copy Purvanchal Technology Pvt. Ltd. </a>
+        </div>
+
+</div>
+    </div>
+</div>
+
+    <!-- footer end-->
+  <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+</body>
+</html>
+<!-- end BASE.html-->

@@ -1,0 +1,54 @@
+<!-- COURSES.html-->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block childpage %}
+<style>
+    .cicon
+    {
+    height:90px;
+    width:90px;
+    background:var(--bgcolor1);
+    font-size:30px;
+    color:white;
+    border-radius:50%;
+    text-align:center;
+    line-height:90px;
+    }
+</style>
+<!-- start heading-->
+<div class="row">
+    <div class="col-sm-5 mx-auto text-center my-4">
+        <p class="fs-3 m-0">Our <b class="txt-color1">Courses / Department
+       <i class="fa-solid fa-code-branch"></i>
+        </b></p>
+        <i>Our courses provide comprehensive education across engineering, sciences, and humanities, fostering academic and professional growth.</i>
+        <hr/>
+    </div>
+</div>
+<!-- end heading-->
+
+<div class="row">
+    <div class="col-sm-10 mx-auto">
+        <div class="row">
+
+            <!-- start infra -->
+            {% for i in cdata%}
+            <div class="col-sm-4 my-5">
+                <div class="card infra shadow-lg mb-2 bg-body-tertiary rounded border-0 p-4 text-center">
+                    <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill"><i class="fa-solid fa-code-branch cicon"></i><span class="visually-hidden">unread messages</span></span>
+                    <h3 class="text-center pt-4">{{i.department}}</h3>
+                    <b>Course Code :<i class="text-muted">{{i.course_code}}</i></b>
+                    <b>No. of Seats :<i class="text-muted">{{i.seats}}</i></b>
+                    <b>Duration :<i class="text-muted">{{i.duration}}</i></b><br/>
+                    <a href="{{i.view_link}}" target="_blank" class="btn shadow-lg rounded-0 w-50 bg-mycolor1 text-light mx-auto">View Syllabus</a>
+                </div>
+
+            </div>
+            {% endfor %}
+            <!-- start infra -->
+        </div>
+    </div>
+</div>
+{% endblock %}
+<!-- end COURSES.html-->

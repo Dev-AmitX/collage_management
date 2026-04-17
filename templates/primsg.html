@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block childpage %}
+
+<!-- start heading-->
+<div class="row">
+    <div class="col-sm-5 mx-auto text-center my-4">
+        <p class="fs-3 m-0">Principal <b class="txt-color1">Message
+       <i class="fa-regular fa-message"></i>
+        </b></p>
+        <i>Our college is committed to academic excellence, skill development, and shaping future-ready, responsible citizens.</i>
+        <hr/>
+    </div>
+</div>
+<!-- end heading-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="row">
+                <div class="col-sm-6 pt-2">
+                    <img src="{% static 'img/basant.jpg' %}" style="max-height:600px;" class="img-fluid fluid-end rounded-3">
+                </div>
+                <div class="col-sm-6 pt-2">
+                 <p style="text-align: justify;">It gives me immense pleasure to welcome you to Government Polytechnic Rajgarh, Mirzapur — a temple of technical learning. Our aim is to provide students with quality education, practical knowledge, and strong moral values that shape them into responsible professionals.
+
+With a team of dedicated faculty members, modern infrastructure, and a supportive learning environment, we strive to nurture innovation, discipline, and leadership among students. We believe that technical education should not only create skilled engineers but also inspire individuals to contribute meaningfully to society.
+
+Let us work together to build a brighter future, driven by knowledge, passion, and purpose.
+
+Wishing all our students great success in life.</p>
+                    <div class="text-end">Warm regards,<br>
+<b>Er. Basant Lal</b><br>
+Principal<br>
+Government Polytechnic Rajgarh, Mirzapur</div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 pt-1">
+            <div class="card w-75 mx-auto border-0 shadow-lg mt-5 " style="width: 18rem;">
+  <div class="card-header">
+    Useful Links
+  </div>
+  <ul class="list-group list-group-flush">
+    <a href="/about/"><li class="list-group-item">University at a Glance</li></a>
+    <a href="/about/"><li class="list-group-item">About Us</li></a>
+    <a href="/about/"><li class="list-group-item">Our Vision</li></a>
+    <a href="/about/"><li class="list-group-item">Our Mission</li></a>
+    <a href="/courses/"><li class="list-group-item">Our Courses</li></a>
+    <a href="/recruiters/"><li class="list-group-item">Our Recruiters</li></a>
+    <a href="/alumny/"><li class="list-group-item">Our Alumni</li></a>
+    <a href="faculty"><li class="list-group-item">Our Faculty Members</li></a>
+  </ul>
+</div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

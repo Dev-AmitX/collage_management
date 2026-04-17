@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'css/all.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
+</head>
+<body>
+<div class="container-fluid px-0">
+<div class="row t1 text-center text-bg-dark py-1">
+    <div class="col-sm-3">
+        <a href="#">FAQs</a> |
+        <a href="#">About Us</a> |
+        <a href="#">Contact & Support</a>
+    </div>
+    <div class="col-sm-3">
+        <i class="fa-solid fa-phone ic"></i>
+        +91,9569146725 | +91,9936468547
+
+    </div>
+    <div class="col-sm-3">
+       <i class="fa-solid fa-envelope ic"></i>
+        brijeshmaurya@gmail.com
+    </div>
+    <div class="col-sm-3">
+        <i class="fa-brands fa-square-facebook ic"></i>
+        <i class="fa-brands fa-linkedin ic"></i>
+        <i class="fa-brands fa-instagram ic"></i>
+        <i class="fa-brands fa-square-twitter ic"></i>
+        <i class="fa-brands fa-whatsapp ic"></i>
+    </div>
+</div>
+<div class="row t2 py-2">
+    <div class="col-sm-3 fs-2 ps-5">
+        My<b class="text-primary">College <i class="fa-solid fa-graduation-cap"></i></b>
+    </div>
+    <div class="col-sm-3 text-end">
+        <b>Heading</b><br/>
+        heading title
+    </div>
+    <div class="col-sm-3 text-end">
+        <b>Heading</b><br/>
+        heading title
+    </div>
+    <div class="col-sm-3 text-end pe-5">
+        <a href="#" class="btn btn-sm text-bg-primary">
+            <i class="fa-regular fa-address-card"></i>
+            Contact Us
+        </a>
+    </div>
+
+</div>
+</div>
+<div class="row menu text-bg-primary" style="min-height:48px;">
+    <div class="col-sm-12">
+
+        <!-- start menu -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="menu">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index1/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-dark" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+        <!-- end menu -->
+    </div>
+</div>
+  <div class="row slider"></div>
+  <div class="row category"></div>
+<script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+</body>
+</html>
